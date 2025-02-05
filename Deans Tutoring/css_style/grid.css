@@ -1,0 +1,168 @@
+* {     /*add lines one to five on every css page*/
+    box-sizing:border-box;
+    margin:0px;
+    padding:0;
+}
+
+h1 {
+    color: firebrick;
+    font-weight: bold;
+}
+h2 {
+    color:firebrick;
+    font-weight: bold;
+    font-size: xx-large;
+}
+h3 {
+    color:firebrick;
+}
+p {
+    font-size: large;
+    color: black;
+}
+.container {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "junk1 content junk2"
+      "image image image"
+      "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    background-color: #2196F3;
+    padding: 5px;
+    width: 98%;
+    margin: 5px 1vw;
+    /*border: 2px solid red;*/
+}
+.container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+}
+.container > div.header {
+    grid-area: header;
+    text-align: center;
+    color:firebrick;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.container > div.content {
+    grid-area: content;
+}
+.container > div.footer {
+    grid-area: footer;
+}
+.container > div.image {
+    grid-area: image;
+   /* border: 2px solid green;*/
+    background-color: cornflowerblue;
+    padding-left: 3%;
+}
+.photo-flexbox img {
+    width: 20vw;
+    margin:5px;
+}
+.container > div.junk1, div.junk2 {
+    /*border:2px solid black;*/
+    /*background-color:green;*/
+    padding-top: 20px;
+}
+#scroll-container {
+    position: relative;
+   /* width: 98%;*/
+    height:100px;
+    overflow: hidden;
+    /*border: 2px solid black;*/
+    /*background: red;*/
+    margin: 5px 1vw;
+
+}
+#scroll-image {
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /* animation properties */
+    -moz-animation: my-animation 10s linear infinite;
+    -webkit-animation: my-animation 10s linear infinite;
+    animation: my-animation 10s linear infinite;
+} 
+#scroll-image img {
+    height: 100px;
+    margin: 0 2px 0 2px;
+}
+
+@keyframes my-animation {
+    from {
+      -moz-transform: translateX(00%);
+      -webkit-transform: translateX(00%);
+      transform: translateX(00%);
+    }
+    to {
+      -moz-transform: translateX(-33.33%);
+      -webkit-transform: translateX(-33.33%);
+      transform: translateX(-33.33%);
+    }
+}
+
+.aboutscroll-container {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    margin:5px;
+    /*border: 2px solid green;*/
+    font-size: larger;
+   /* display:block;*/
+    width:45vw;
+    height:20px;
+    color:firebrick;
+    background-color: aliceblue;
+}
+.scroll-text {
+    position: absolute;
+    top:0;
+    left:0;
+    white-space: nowrap;
+    overflow: hidden;
+    -moz-animation: my-animation1 15s linear infinite;
+    -webkit-animation: my-animation1 15s linear infinite;
+    animation: my-animation1 15s linear infinite;
+}
+@keyframes my-animation1 {
+    from {
+      -moz-transform: translateX(00%);
+      -webkit-transform: translateX(00%);
+      transform: translateX(00%);
+    }
+    to {
+      -moz-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+}
+
+.photo-flexbox {
+    display: flex;
+    width: 90vw;
+    flex-direction: row;
+    /*border: 2px solid black;*/
+    justify-content: space-evenly;
+    background-color:cornflowerblue;
+    margin:5px;
+}
+.button1 {
+    border: 2px solid blue;
+    color: black;
+}
+   
+.spacer {
+    padding:20px;
+}
+.footer {
+    color:firebrick;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
